@@ -1,0 +1,2033 @@
+Json File
+
+i-engage.json File
+
+{
+  "name": "A rainy day",
+  "gameData": {
+    "drop": {
+      "text": {
+        "backgroundColor": "",
+        "positionList": [
+          {
+            "sceneIdList": [
+              "IXgY",
+              "ZS0O",
+              "rIkJ",
+              "M6Uh",
+              "Xta4"
+            ],
+            "width": 396,
+            "x": 477,
+            "y": 477,
+            "angle": 0,
+            "height": 23
+          }
+        ],
+        "textAlign": "center",
+        "underline": false,
+        "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/audioFile/drop_the_correct_image_in_the_outline_audio_1718858196192.mp3",
+        "className": "AnimationActivityProbAudio",
+        "fill": "#1e1e1e",
+        "fontStyle": "normal",
+        "type": "textbox",
+        "playbackRate": 1,
+        "fontFamily": "Comic Neue",
+        "assetId": 15862,
+        "fontSize": 20,
+        "text": "drop the correct image in the outline",
+        "fontWeight": "normal"
+      }
+    },
+    "dragImgTwo": [
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "rIkJ"
+              ],
+              "width": 60,
+              "x": 846,
+              "y": 131,
+              "angle": 0,
+              "height": 87
+            },
+            {
+              "sceneIdList": [
+                "M6Uh"
+              ],
+              "width": 78,
+              "x": 563,
+              "y": 178,
+              "angle": 0,
+              "height": 107
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/image1115415.png",
+          "assetId": 42661,
+          "className": "AnimationActivityProbImage",
+          "type": "image",
+          "icCorrect": true
+        },
+        "status": false
+      },
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "rIkJ",
+                "M6Uh"
+              ],
+              "width": 80,
+              "x": 833,
+              "y": 248,
+              "angle": 0,
+              "height": 89
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/image1114682.png",
+          "assetId": 42663,
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        },
+        "status": false
+      },
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "rIkJ",
+                "M6Uh"
+              ],
+              "width": 55,
+              "x": 843,
+              "y": 368,
+              "angle": 0,
+              "height": 86
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/image1114649.png",
+          "assetId": 42664,
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        },
+        "status": false
+      }
+    ],
+    "uploadBtns": [
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "6Z0k"
+              ],
+              "width": 80,
+              "x": 459,
+              "y": 369,
+              "angle": 0,
+              "height": 80
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/Group11462.png",
+          "assetId": 42676,
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        },
+        "isSelected": false
+      },
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "IWgv",
+                "kCgQ"
+              ],
+              "width": 120,
+              "x": 373,
+              "y": 377,
+              "angle": 0,
+              "height": 73
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/Frame11494.png",
+          "assetId": 42682,
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        },
+        "isSelected": false
+      },
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "IWgv",
+                "kCgQ"
+              ],
+              "width": 125,
+              "x": 511,
+              "y": 380,
+              "angle": 0,
+              "height": 70
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/Frame11494(1).png",
+          "assetId": 42681,
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        },
+        "isSelected": false
+      },
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "LjZl"
+              ],
+              "width": 256,
+              "x": 191,
+              "y": 400,
+              "angle": 0,
+              "height": 53
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/Frame11335.png",
+          "assetId": 42683,
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        },
+        "isSelected": false
+      },
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "LjZl"
+              ],
+              "width": 185,
+              "x": 518,
+              "y": 400,
+              "angle": 0,
+              "height": 53
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/Group11331.png",
+          "assetId": 42677,
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        },
+        "isSelected": false,
+        "text": {
+          "backgroundColor": "",
+          "positionList": [
+            {
+              "sceneIdList": [
+                "LjZl"
+              ],
+              "width": 562,
+              "x": 184,
+              "y": 90,
+              "angle": 0,
+              "height": 68
+            }
+          ],
+          "textAlign": "center",
+          "underline": false,
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/audioFile/con_audio_1718689933168.mp3",
+          "className": "AnimationActivityProbAudio",
+          "fill": "#f37335",
+          "fontStyle": "normal",
+          "type": "textbox",
+          "playbackRate": 1,
+          "fontFamily": "Comic Neue",
+          "assetId": 15722,
+          "fontSize": 60,
+          "text": "Congratulations!",
+          "fontWeight": "bold"
+        }
+      },
+      {
+        "image": {
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/Group12780(1).png",
+          "assetId": 42671,
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        },
+        "isSelected": false,
+        "text": {
+          "backgroundColor": "",
+          "positionList": [
+            {
+              "sceneIdList": [
+                "LjZl"
+              ],
+              "width": 601,
+              "x": 166,
+              "y": 197,
+              "angle": 0,
+              "height": 152
+            }
+          ],
+          "textAlign": "center",
+          "underline": false,
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/audioFile/a_audio_1718689837207.mp3",
+          "className": "AnimationActivityProbAudio",
+          "fill": "#1e1e1e",
+          "fontStyle": "normal",
+          "type": "textbox",
+          "playbackRate": 1,
+          "fontFamily": "Comic Neue",
+          "assetId": 15719,
+          "fontSize": 30,
+          "text": "You completed the story! Your curiosity and love for reading is truly amazing. Keep exploring new objects, characters and worlds through the magic of words!",
+          "fontWeight": "normal"
+        }
+      },
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "kCgQ"
+              ],
+              "width": 718,
+              "x": 110,
+              "y": 36,
+              "angle": 0,
+              "height": 480
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/image1113453.png",
+          "assetId": 42770,
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        },
+        "isSelected": false,
+        "text": {
+          "backgroundColor": "",
+          "positionList": [
+            {
+              "sceneIdList": [
+                "IWgv",
+                "kCgQ"
+              ],
+              "width": 124,
+              "x": 441,
+              "y": 330,
+              "angle": 0,
+              "height": 23
+            }
+          ],
+          "textAlign": "center",
+          "underline": false,
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/audioFile/pic_audio_1718689140590.mp3",
+          "className": "AnimationActivityProbAudio",
+          "fill": "#1e1e1e",
+          "fontStyle": "normal",
+          "type": "textbox",
+          "playbackRate": 1,
+          "fontFamily": "Comic Neue",
+          "assetId": 15715,
+          "fontSize": 20,
+          "text": "picture.png",
+          "fontWeight": "normal"
+        }
+      },
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "kCgQ"
+              ],
+              "width": 42,
+              "x": 830,
+              "y": 10,
+              "angle": 0,
+              "height": 42
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/Group14433.png",
+          "assetId": 42668,
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        },
+        "isSelected": false
+      },
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "FLwu",
+                "8EmB",
+                "vV1L",
+                "ze9n",
+                "8RDC",
+                "cjfj",
+                "6Z0k",
+                "IWgv",
+                "kCgQ",
+                "EAFa",
+                "XxsW"
+              ],
+              "width": 345,
+              "x": 328,
+              "y": 276,
+              "angle": 0,
+              "height": 5
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/Vector237.png",
+          "assetId": 42720,
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        },
+        "isSelected": false
+      }
+    ],
+    "game": 0,
+    "dragImgFive": [
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "LLWe"
+              ],
+              "width": 94,
+              "x": 829,
+              "y": 139,
+              "angle": 0,
+              "height": 70
+            },
+            {
+              "sceneIdList": [
+                "BKqa"
+              ],
+              "width": 186,
+              "x": 497,
+              "y": 312,
+              "angle": 0,
+              "height": 140
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/Group17303.png",
+          "assetId": 42706,
+          "className": "AnimationActivityProbImage",
+          "type": "image",
+          "icCorrect": true
+        },
+        "status": ""
+      },
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "LLWe",
+                "BKqa"
+              ],
+              "width": 56,
+              "x": 843,
+              "y": 251,
+              "angle": 0,
+              "height": 88
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/image1114838.png",
+          "assetId": 42697,
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        },
+        "status": ""
+      },
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "LLWe",
+                "BKqa"
+              ],
+              "width": 39,
+              "x": 853,
+              "y": 375,
+              "angle": 0,
+              "height": 77
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/image1113046.png",
+          "assetId": 42698,
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        },
+        "status": ""
+      }
+    ],
+    "dragImgThree": [
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "Xta4"
+              ],
+              "width": 92,
+              "x": 826,
+              "y": 127,
+              "angle": 0,
+              "height": 92
+            },
+            {
+              "sceneIdList": [
+                "6YUZ"
+              ],
+              "width": 92,
+              "x": 546,
+              "y": 196,
+              "angle": 0,
+              "height": 92
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/image1115419.png",
+          "assetId": 42696,
+          "className": "AnimationActivityProbImage",
+          "type": "image",
+          "icCorrect": true
+        },
+        " status": false
+      },
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "Xta4",
+                "6YUZ"
+              ],
+              "width": 89,
+              "x": 828,
+              "y": 251,
+              "angle": 0,
+              "height": 89
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/image1115317.png",
+          "assetId": 42704,
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        },
+        " status": false
+      },
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "Xta4",
+                "6YUZ"
+              ],
+              "width": 82,
+              "x": 831,
+              "y": 371,
+              "angle": 0,
+              "height": 82
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/0_128.png",
+          "assetId": 42703,
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        },
+        " status": false
+      }
+    ],
+    "quesCount": 0,
+    "lastQues": [
+      {
+        "text": {
+          "backgroundColor": "",
+          "positionList": [
+            {
+              "sceneIdList": [
+                "FLwu",
+                "8EmB"
+              ],
+              "width": 304,
+              "x": 349,
+              "y": 146,
+              "angle": 0,
+              "height": 59
+            }
+          ],
+          "textAlign": "center",
+          "underline": false,
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/audioFile/q1_audio_1718688518623.mp3",
+          "className": "AnimationActivityProbAudio",
+          "fill": "#1e1e1e",
+          "fontStyle": "normal",
+          "type": "textbox",
+          "playbackRate": 1,
+          "fontFamily": "Comic Neue",
+          "assetId": 15710,
+          "fontSize": 24,
+          "text": "Would you climb up a hill on a rainy day?",
+          "fontWeight": "normal"
+        },
+        "status": false
+      },
+      {
+        "text": {
+          "backgroundColor": "",
+          "positionList": [
+            {
+              "sceneIdList": [
+                "vV1L",
+                "ze9n"
+              ],
+              "width": 304,
+              "x": 349,
+              "y": 146,
+              "angle": 0,
+              "height": 59
+            }
+          ],
+          "textAlign": "center",
+          "underline": false,
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/audioFile/q2_audio_1718688698230.mp3",
+          "className": "AnimationActivityProbAudio",
+          "fill": "#1e1e1e",
+          "fontStyle": "normal",
+          "type": "textbox",
+          "playbackRate": 1,
+          "fontFamily": "Comic Neue",
+          "assetId": 15711,
+          "fontSize": 24,
+          "text": "Do you know any games you can play indoors?",
+          "fontWeight": "normal"
+        },
+        "status": false
+      },
+      {
+        "text": {
+          "backgroundColor": "",
+          "positionList": [
+            {
+              "sceneIdList": [
+                "8RDC",
+                "cjfj"
+              ],
+              "width": 304,
+              "x": 349,
+              "y": 146,
+              "angle": 0,
+              "height": 59
+            }
+          ],
+          "textAlign": "center",
+          "underline": false,
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/audioFile/q_audio_1718799352986.mp3",
+          "className": "AnimationActivityProbAudio",
+          "fill": "#1e1e1e",
+          "fontStyle": "normal",
+          "type": "textbox",
+          "playbackRate": 1,
+          "fontFamily": "Comic Neue",
+          "assetId": 15854,
+          "fontSize": 24,
+          "text": "Can you make a game of your own?",
+          "fontWeight": "normal"
+        },
+        "status": false
+      },
+      {
+        "text": {
+          "backgroundColor": "",
+          "positionList": [
+            {
+              "sceneIdList": [
+                "6Z0k",
+                "IWgv"
+              ],
+              "width": 304,
+              "x": 349,
+              "y": 146,
+              "angle": 0,
+              "height": 59
+            },
+            {
+              "sceneIdList": [
+                "kCgQ"
+              ],
+              "width": 200,
+              "x": 349,
+              "y": 146,
+              "angle": 0,
+              "height": 49
+            }
+          ],
+          "textAlign": "center",
+          "underline": false,
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/audioFile/q3_audio_1718799339351.mp3",
+          "className": "AnimationActivityProbAudio",
+          "fill": "#1e1e1e",
+          "fontStyle": "normal",
+          "type": "textbox",
+          "playbackRate": 1,
+          "fontFamily": "Comic Neue",
+          "assetId": 15712,
+          "fontSize": 20,
+          "text": "Upload an image of a game you made up.",
+          "fontWeight": "normal"
+        },
+        "status": false
+      },
+      {
+        "text": {
+          "backgroundColor": "",
+          "positionList": [
+            {
+              "sceneIdList": [
+                "EAFa",
+                "XxsW"
+              ],
+              "width": 304,
+              "x": 349,
+              "y": 146,
+              "angle": 0,
+              "height": 27
+            }
+          ],
+          "textAlign": "center",
+          "underline": false,
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/audioFile/q4_audio_1718689671983.mp3",
+          "className": "AnimationActivityProbAudio",
+          "fill": "#1e1e1e",
+          "fontStyle": "normal",
+          "type": "textbox",
+          "playbackRate": 1,
+          "fontFamily": "Comic Neue",
+          "assetId": 15718,
+          "fontSize": 24,
+          "text": "Do you eat fruits?",
+          "fontWeight": "normal"
+        },
+        "status": false
+      }
+    ],
+    "yesBtn": {
+      "image": {
+        "positionList": [
+          {
+            "sceneIdList": [
+              "FLwu",
+              "vV1L",
+              "8RDC",
+              "EAFa"
+            ],
+            "width": 202,
+            "x": 405,
+            "y": 305,
+            "angle": 0,
+            "height": 47
+          }
+        ],
+        "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/yesbtn.png",
+        "assetId": 42650,
+        "className": "AnimationActivityProbImage",
+        "type": "image"
+      }
+    },
+    "dotImg": [
+      {},
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "rIkJ"
+              ],
+              "width": 82,
+              "x": 559,
+              "y": 174,
+              "angle": 0,
+              "height": 114
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/Vector1009.png",
+          "assetId": 42651,
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        }
+      },
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "Xta4"
+              ],
+              "width": 104,
+              "x": 540,
+              "y": 190,
+              "angle": 0,
+              "height": 102
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/Vector1010.png",
+          "assetId": 42692,
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        }
+      },
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "O4ul"
+              ],
+              "width": 111,
+              "x": 526,
+              "y": 184,
+              "angle": 0,
+              "height": 107
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/Vector1012.png",
+          "assetId": 42691,
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        }
+      },
+      {},
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "LLWe"
+              ],
+              "width": 183,
+              "x": 497,
+              "y": 312,
+              "angle": 0,
+              "height": 140
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/Vector1707.png",
+          "assetId": 42690,
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        }
+      },
+      {},
+      {},
+      {}
+    ],
+    "gameCompleted": false,
+    "proImg": [
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "IXgY"
+              ],
+              "width": 328,
+              "x": 449,
+              "y": 129,
+              "angle": 0,
+              "height": 328
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/Rectangle7.png",
+          "assetId": 42654,
+          "num": 0,
+          "name": "dragImgOne",
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        },
+        "text": {
+          "backgroundColor": "",
+          "positionList": [
+            {
+              "sceneIdList": [
+                "IXgY",
+                "ZS0O",
+                "rIkJ",
+                "M6Uh",
+                "Xta4",
+                "6YUZ",
+                "O4ul",
+                "hF1i"
+              ],
+              "width": 101,
+              "x": 154,
+              "y": 196,
+              "angle": 0,
+              "height": 27
+            }
+          ],
+          "textAlign": "center",
+          "underline": false,
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/audioFile/rainy_day_audio_1718629008016.mp3",
+          "className": "AnimationActivityProbAudio",
+          "fill": "#64cb5b",
+          "fontStyle": "normal",
+          "type": "textbox",
+          "playbackRate": 1,
+          "fontFamily": "Comic Neue",
+          "assetId": 15687,
+          "fontSize": 24,
+          "text": "rainy day",
+          "fontWeight": "bold"
+        },
+        "status": false
+      },
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "rIkJ",
+                "M6Uh",
+                "Xta4",
+                "6YUZ"
+              ],
+              "width": 328,
+              "x": 449,
+              "y": 129,
+              "angle": 0,
+              "height": 328
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/Frame14323.png",
+          "assetId": 42678,
+          "num": 1,
+          "name": "dragImgTwo",
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        },
+        "text": {
+          "backgroundColor": "",
+          "positionList": [
+            {
+              "sceneIdList": [
+                "IXgY",
+                "ZS0O",
+                "rIkJ",
+                "M6Uh",
+                "Xta4",
+                "6YUZ",
+                "O4ul",
+                "hF1i"
+              ],
+              "width": 51,
+              "x": 309,
+              "y": 259,
+              "angle": 0,
+              "height": 27
+            }
+          ],
+          "textAlign": "center",
+          "underline": false,
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/audioFile/bikes_audio_1718629030009.mp3",
+          "className": "AnimationActivityProbAudio",
+          "fill": "#64cb5b",
+          "fontStyle": "normal",
+          "type": "textbox",
+          "playbackRate": 1,
+          "fontFamily": "Comic Neue",
+          "assetId": 15689,
+          "fontSize": 24,
+          "text": "bikes",
+          "fontWeight": "bold"
+        },
+        "status": false
+      },
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "rIkJ",
+                "M6Uh",
+                "Xta4",
+                "6YUZ"
+              ],
+              "width": 328,
+              "x": 449,
+              "y": 129,
+              "angle": 0,
+              "height": 328
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/Frame14323.png",
+          "assetId": 42678,
+          "num": 2,
+          "name": "dragImgThree",
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        },
+        "text": {
+          "backgroundColor": "",
+          "positionList": [
+            {
+              "sceneIdList": [
+                "IXgY",
+                "ZS0O",
+                "rIkJ",
+                "M6Uh",
+                "Xta4",
+                "6YUZ",
+                "O4ul",
+                "hF1i"
+              ],
+              "width": 29,
+              "x": 149,
+              "y": 290,
+              "angle": 0,
+              "height": 27
+            }
+          ],
+          "textAlign": "center",
+          "underline": false,
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/audioFile/hill_audio_1718629048816.mp3",
+          "className": "AnimationActivityProbAudio",
+          "fill": "#64cb5b",
+          "fontStyle": "normal",
+          "type": "textbox",
+          "playbackRate": 1,
+          "fontFamily": "Comic Neue",
+          "assetId": 15690,
+          "fontSize": 24,
+          "text": "hill",
+          "fontWeight": "bold"
+        },
+        "status": false
+      },
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "O4ul",
+                "hF1i"
+              ],
+              "width": 328,
+              "x": 449,
+              "y": 129,
+              "angle": 0,
+              "height": 328
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/Frame14325(1).png",
+          "assetId": 42711,
+          "num": 3,
+          "name": "dragImgFour",
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        },
+        "text": {
+          "backgroundColor": "",
+          "positionList": [
+            {
+              "sceneIdList": [
+                "IXgY",
+                "ZS0O",
+                "rIkJ",
+                "M6Uh",
+                "Xta4",
+                "6YUZ",
+                "O4ul",
+                "hF1i"
+              ],
+              "width": 53,
+              "x": 165,
+              "y": 321,
+              "angle": 0,
+              "height": 27
+            }
+          ],
+          "textAlign": "center",
+          "underline": false,
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/audioFile/fruits_audio_1718629067017.mp3",
+          "className": "AnimationActivityProbAudio",
+          "fill": "#64cb5b",
+          "fontStyle": "normal",
+          "type": "textbox",
+          "playbackRate": 1,
+          "fontFamily": "Comic Neue",
+          "assetId": 15692,
+          "fontSize": 24,
+          "text": "fruits",
+          "fontWeight": "bold"
+        },
+        "status": false
+      },
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "rIkJ",
+                "M6Uh",
+                "Xta4",
+                "6YUZ"
+              ],
+              "width": 328,
+              "x": 449,
+              "y": 129,
+              "angle": 0,
+              "height": 328
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/Frame14323.png",
+          "assetId": 42678,
+          "num": 4,
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        },
+        "status": false
+      },
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "LLWe",
+                "BKqa"
+              ],
+              "width": 355,
+              "x": 449,
+              "y": 129,
+              "angle": 0,
+              "height": 328
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/Frame14324(1).png",
+          "assetId": 42712,
+          "num": 5,
+          "name": "dragImgFive",
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        },
+        "text": {
+          "backgroundColor": "",
+          "positionList": [
+            {
+              "sceneIdList": [
+                "LLWe",
+                "BKqa"
+              ],
+              "width": 147,
+              "x": 239,
+              "y": 238,
+              "angle": 0,
+              "height": 27
+            }
+          ],
+          "textAlign": "center",
+          "underline": false,
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/audioFile/indoor_games_audio_1718685680987.mp3",
+          "className": "AnimationActivityProbAudio",
+          "fill": "#64cb5b",
+          "fontStyle": "normal",
+          "type": "textbox",
+          "playbackRate": 1,
+          "fontFamily": "Comic Neue",
+          "assetId": 15705,
+          "fontSize": 24,
+          "text": "indoor games",
+          "fontWeight": "bold"
+        },
+        "status": false
+      },
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "LLWe",
+                "BKqa"
+              ],
+              "width": 355,
+              "x": 449,
+              "y": 129,
+              "angle": 0,
+              "height": 328
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/Frame14324(1).png",
+          "assetId": 42712,
+          "num": 6,
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        },
+        "status": false
+      },
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "LLWe",
+                "BKqa"
+              ],
+              "width": 355,
+              "x": 449,
+              "y": 129,
+              "angle": 0,
+              "height": 328
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/Frame14324(1).png",
+          "assetId": 42712,
+          "num": 7,
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        },
+        "status": false
+      },
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "LLWe",
+                "BKqa"
+              ],
+              "width": 355,
+              "x": 449,
+              "y": 129,
+              "angle": 0,
+              "height": 328
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/Frame14324(1).png",
+          "assetId": 42712,
+          "num": 8,
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        },
+        "status": false
+      }
+    ],
+    "submitImage": {
+      "image": {
+        "positionList": [
+          {
+            "sceneIdList": [
+              "8EmB",
+              "ze9n",
+              "cjfj",
+              "XxsW"
+            ],
+            "width": 181,
+            "x": 412,
+            "y": 362,
+            "angle": 0,
+            "height": 32
+          }
+        ],
+        "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/submitted.png",
+        "assetId": 42653,
+        "className": "AnimationActivityProbImage",
+        "type": "image"
+      }
+    },
+    "Ques": false,
+    "sceneCount": 0,
+    "noBtn": {
+      "image": {
+        "positionList": [
+          {
+            "sceneIdList": [
+              "FLwu",
+              "vV1L",
+              "8RDC",
+              "EAFa"
+            ],
+            "width": 206,
+            "x": 403,
+            "y": 387,
+            "angle": 0,
+            "height": 48
+          }
+        ],
+        "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/noBtn.png",
+        "assetId": 42659,
+        "className": "AnimationActivityProbImage",
+        "type": "image"
+      }
+    },
+    "uploadImage": {
+      "image": {
+        "positionList": [
+          {
+            "sceneIdList": [
+              "6Z0k",
+              "IWgv",
+              "kCgQ"
+            ],
+            "width": 126,
+            "x": 440,
+            "y": 299,
+            "angle": 0,
+            "height": 26
+          }
+        ],
+        "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/UPLOAD.png",
+        "assetId": 42652,
+        "className": "AnimationActivityProbImage",
+        "type": "image"
+      }
+    },
+    "blkRight": {
+      "image": {
+        "positionList": [
+          {
+            "sceneIdList": [
+              "FLwu",
+              "8EmB",
+              "vV1L",
+              "ze9n",
+              "8RDC",
+              "cjfj",
+              "6Z0k",
+              "IWgv",
+              "kCgQ",
+              "EAFa",
+              "XxsW"
+            ],
+            "width": 70,
+            "x": 662,
+            "y": 310,
+            "angle": 0,
+            "height": 60
+          }
+        ],
+        "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/pointerDisable(1).png",
+        "assetId": 42657,
+        "className": "AnimationActivityProbImage",
+        "type": "image"
+      }
+    },
+    "Btns": [
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "IXgY",
+                "ZS0O",
+                "rIkJ",
+                "M6Uh",
+                "Xta4",
+                "6YUZ",
+                "O4ul",
+                "hF1i",
+                "66Ww",
+                "LLWe",
+                "BKqa",
+                "MfNv",
+                "Yr6p",
+                "GgfY",
+                "FLwu",
+                "8EmB",
+                "vV1L",
+                "ze9n",
+                "8RDC",
+                "cjfj",
+                "6Z0k",
+                "IWgv",
+                "kCgQ",
+                "EAFa",
+                "XxsW"
+              ],
+              "width": 45,
+              "x": 60,
+              "y": 470,
+              "angle": 0,
+              "height": 45
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/Group12770.png",
+          "assetId": 42689,
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        },
+        "status": false
+      },
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "IXgY",
+                "ZS0O",
+                "rIkJ",
+                "M6Uh",
+                "Xta4",
+                "6YUZ",
+                "O4ul",
+                "hF1i",
+                "66Ww",
+                "LLWe",
+                "BKqa",
+                "MfNv",
+                "Yr6p",
+                "GgfY",
+                "FLwu",
+                "8EmB",
+                "vV1L",
+                "ze9n",
+                "8RDC",
+                "cjfj",
+                "6Z0k",
+                "IWgv",
+                "kCgQ",
+                "EAFa",
+                "XxsW"
+              ],
+              "width": 49,
+              "x": 315,
+              "y": 470,
+              "angle": 0,
+              "height": 45
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/Frame12703.png",
+          "assetId": 42680,
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        },
+        "status": false
+      },
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "IXgY",
+                "ZS0O",
+                "rIkJ",
+                "M6Uh",
+                "Xta4",
+                "6YUZ",
+                "O4ul",
+                "hF1i",
+                "66Ww",
+                "LLWe",
+                "BKqa",
+                "MfNv",
+                "Yr6p",
+                "GgfY",
+                "FLwu",
+                "8EmB",
+                "vV1L",
+                "ze9n",
+                "8RDC",
+                "cjfj",
+                "6Z0k",
+                "IWgv",
+                "kCgQ",
+                "EAFa",
+                "XxsW"
+              ],
+              "width": 49,
+              "x": 60,
+              "y": 470,
+              "angle": 0,
+              "height": 45
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/Group14365.png",
+          "assetId": 42670,
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        },
+        "text": {
+          "backgroundColor": "",
+          "positionList": [
+            {
+              "sceneIdList": [
+                "IXgY",
+                "ZS0O",
+                "rIkJ",
+                "M6Uh",
+                "Xta4",
+                "6YUZ",
+                "O4ul",
+                "hF1i",
+                "66Ww",
+                "LLWe",
+                "BKqa",
+                "MfNv",
+                "Yr6p",
+                "GgfY",
+                "FLwu",
+                "8EmB",
+                "vV1L",
+                "ze9n",
+                "8RDC",
+                "cjfj",
+                "6Z0k",
+                "IWgv",
+                "kCgQ",
+                "EAFa",
+                "XxsW"
+              ],
+              "width": 72,
+              "x": 174,
+              "y": 481,
+              "angle": 0,
+              "height": 27
+            }
+          ],
+          "textAlign": "center",
+          "underline": false,
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/audioFile/pn_audio_1718628627590.mp3",
+          "className": "AnimationActivityProbAudio",
+          "fill": "#1e1e1e",
+          "fontStyle": "normal",
+          "type": "textbox",
+          "playbackRate": 1,
+          "fontFamily": "Comic Neue",
+          "assetId": 15684,
+          "fontSize": 24,
+          "text": "1/5",
+          "fontWeight": "bold"
+        },
+        "status": false
+      },
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "IXgY",
+                "ZS0O",
+                "rIkJ",
+                "M6Uh",
+                "Xta4",
+                "6YUZ",
+                "O4ul",
+                "hF1i",
+                "66Ww",
+                "LLWe",
+                "BKqa",
+                "MfNv",
+                "Yr6p",
+                "GgfY",
+                "FLwu",
+                "8EmB",
+                "vV1L",
+                "ze9n",
+                "8RDC",
+                "cjfj",
+                "6Z0k",
+                "IWgv",
+                "kCgQ",
+                "EAFa",
+                "XxsW"
+              ],
+              "width": 49,
+              "x": 315,
+              "y": 470,
+              "angle": 0,
+              "height": 45
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/Group12769.png",
+          "assetId": 42673,
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        },
+        "status": false
+      },
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "IXgY",
+                "ZS0O",
+                "rIkJ",
+                "M6Uh",
+                "Xta4",
+                "6YUZ",
+                "O4ul",
+                "hF1i",
+                "66Ww",
+                "LLWe",
+                "BKqa",
+                "MfNv",
+                "Yr6p",
+                "GgfY",
+                "FLwu",
+                "8EmB",
+                "vV1L",
+                "ze9n",
+                "8RDC",
+                "cjfj",
+                "6Z0k",
+                "IWgv",
+                "kCgQ",
+                "EAFa",
+                "XxsW"
+              ],
+              "width": 334,
+              "x": 42,
+              "y": 89,
+              "angle": 0,
+              "height": 63
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/Group12411(3)(1).png",
+          "assetId": 42674,
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        },
+        "status": false
+      },
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "LLWe"
+              ],
+              "width": 164,
+              "x": 710,
+              "y": 30,
+              "angle": 0,
+              "height": 35
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/Group14367.png",
+          "assetId": 42669,
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        },
+        "status": false
+      }
+    ],
+    "dragImgOne": [
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "IXgY"
+              ],
+              "width": 81,
+              "x": 832,
+              "y": 132,
+              "angle": 0,
+              "height": 81
+            },
+            {
+              "sceneIdList": [
+                "ZS0O"
+              ],
+              "width": 328,
+              "x": 449,
+              "y": 129,
+              "angle": 0,
+              "height": 328
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/image1115420.png",
+          "assetId": 42660,
+          "className": "AnimationActivityProbImage",
+          "type": "image",
+          "icCorrect": true
+        },
+        "status": false
+      },
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "IXgY",
+                "ZS0O"
+              ],
+              "width": 81,
+              "x": 833,
+              "y": 254,
+              "angle": 0,
+              "height": 81
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/image1114733.png",
+          "assetId": 42662,
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        },
+        "status": false
+      },
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "IXgY",
+                "ZS0O"
+              ],
+              "width": 77,
+              "x": 835,
+              "y": 374,
+              "angle": 0,
+              "height": 77
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/image1114536.png",
+          "assetId": 42665,
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        },
+        "status": false
+      }
+    ],
+    "twoChild": {
+      "image": {
+        "positionList": [
+          {
+            "sceneIdList": [
+              "IXgY",
+              "ZS0O"
+            ],
+            "width": 126,
+            "x": 546,
+            "y": 290,
+            "angle": 0,
+            "height": 164
+          }
+        ],
+        "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/Group16535.png",
+        "assetId": 42666,
+        "className": "AnimationActivityProbImage",
+        "type": "image"
+      }
+    },
+    "quesPad": {
+      "image": {
+        "positionList": [
+          {
+            "sceneIdList": [
+              "FLwu",
+              "8EmB",
+              "vV1L",
+              "ze9n",
+              "8RDC",
+              "cjfj",
+              "6Z0k",
+              "IWgv",
+              "kCgQ",
+              "EAFa",
+              "XxsW"
+            ],
+            "width": 388,
+            "x": 304,
+            "y": 41,
+            "angle": 0,
+            "height": 475
+          }
+        ],
+        "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/Frame12711.png",
+        "assetId": 42679,
+        "className": "AnimationActivityProbImage",
+        "type": "image"
+      }
+    },
+    "right": {
+      "image": {
+        "positionList": [
+          {
+            "sceneIdList": [
+              "FLwu",
+              "8EmB",
+              "vV1L",
+              "ze9n",
+              "8RDC",
+              "cjfj",
+              "6Z0k",
+              "IWgv",
+              "kCgQ",
+              "EAFa",
+              "XxsW"
+            ],
+            "width": 70,
+            "x": 662,
+            "y": 310,
+            "angle": 0,
+            "height": 60
+          }
+        ],
+        "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/pointerEnable.png",
+        "assetId": 42656,
+        "className": "AnimationActivityProbImage",
+        "type": "image"
+      }
+    },
+    "quesText": [
+      {
+        "text": {
+          "backgroundColor": "",
+          "positionList": [
+            {
+              "sceneIdList": [
+                "FLwu",
+                "8EmB"
+              ],
+              "width": 304,
+              "x": 349,
+              "y": 146,
+              "angle": 0,
+              "height": 59
+            }
+          ],
+          "textAlign": "center",
+          "underline": false,
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/audioFile/q1_audio_1718688518623.mp3",
+          "className": "AnimationActivityProbAudio",
+          "fill": "#1e1e1e",
+          "fontStyle": "normal",
+          "type": "textbox",
+          "playbackRate": 1,
+          "fontFamily": "Comic Neue",
+          "assetId": 15710,
+          "fontSize": 24,
+          "text": "Would you climb up a hill on a rainy day?",
+          "fontWeight": "normal"
+        },
+        "status": false
+      },
+      {
+        "text": {
+          "backgroundColor": "",
+          "positionList": [
+            {
+              "sceneIdList": [
+                "vV1L",
+                "ze9n"
+              ],
+              "width": 304,
+              "x": 349,
+              "y": 146,
+              "angle": 0,
+              "height": 59
+            }
+          ],
+          "textAlign": "center",
+          "underline": false,
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/audioFile/q2_audio_1718688698230.mp3",
+          "className": "AnimationActivityProbAudio",
+          "fill": "#1e1e1e",
+          "fontStyle": "normal",
+          "type": "textbox",
+          "playbackRate": 1,
+          "fontFamily": "Comic Neue",
+          "assetId": 15711,
+          "fontSize": 24,
+          "text": "Do you know any games you can play indoors?",
+          "fontWeight": "normal"
+        },
+        "status": false
+      },
+      {
+        "text": {
+          "backgroundColor": "",
+          "positionList": [
+            {
+              "sceneIdList": [
+                "8RDC",
+                "cjfj"
+              ],
+              "width": 304,
+              "x": 349,
+              "y": 146,
+              "angle": 0,
+              "height": 59
+            }
+          ],
+          "textAlign": "center",
+          "underline": false,
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/audioFile/q_audio_1718799352986.mp3",
+          "className": "AnimationActivityProbAudio",
+          "fill": "#1e1e1e",
+          "fontStyle": "normal",
+          "type": "textbox",
+          "playbackRate": 1,
+          "fontFamily": "Comic Neue",
+          "assetId": 15854,
+          "fontSize": 24,
+          "text": "Can you make a game of your own?",
+          "fontWeight": "normal"
+        },
+        "status": false
+      },
+      {
+        "text": {
+          "backgroundColor": "",
+          "positionList": [
+            {
+              "sceneIdList": [
+                "6Z0k",
+                "IWgv"
+              ],
+              "width": 304,
+              "x": 349,
+              "y": 146,
+              "angle": 0,
+              "height": 59
+            },
+            {
+              "sceneIdList": [
+                "kCgQ"
+              ],
+              "width": 200,
+              "x": 349,
+              "y": 146,
+              "angle": 0,
+              "height": 49
+            }
+          ],
+          "textAlign": "center",
+          "underline": false,
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/audioFile/q3_audio_1718799339351.mp3",
+          "className": "AnimationActivityProbAudio",
+          "fill": "#1e1e1e",
+          "fontStyle": "normal",
+          "type": "textbox",
+          "playbackRate": 1,
+          "fontFamily": "Comic Neue",
+          "assetId": 15712,
+          "fontSize": 24,
+          "text": "Upload an image of a game you made up.",
+          "fontWeight": "normal"
+        },
+        "status": false
+      },
+      {
+        "text": {
+          "backgroundColor": "",
+          "positionList": [
+            {
+              "sceneIdList": [
+                "EAFa",
+                "XxsW"
+              ],
+              "width": 304,
+              "x": 349,
+              "y": 146,
+              "angle": 0,
+              "height": 27
+            }
+          ],
+          "textAlign": "center",
+          "underline": false,
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/audioFile/q4_audio_1718689671983.mp3",
+          "className": "AnimationActivityProbAudio",
+          "fill": "#1e1e1e",
+          "fontStyle": "normal",
+          "type": "textbox",
+          "playbackRate": 1,
+          "fontFamily": "Comic Neue",
+          "assetId": 15718,
+          "fontSize": 24,
+          "text": "Do you eat fruits?",
+          "fontWeight": "normal"
+        },
+        "status": false
+      }
+    ],
+    "dragImgFour": [
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "O4ul"
+              ],
+              "width": 85,
+              "x": 833,
+              "y": 121,
+              "angle": 0,
+              "height": 103
+            },
+            {
+              "sceneIdList": [
+                "hF1i"
+              ],
+              "width": 97,
+              "x": 533,
+              "y": 186,
+              "angle": 0,
+              "height": 103
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/Group16534.png",
+          "assetId": 42699,
+          "className": "AnimationActivityProbImage",
+          "type": "image",
+          "icCorrect": true
+        },
+        "status": false
+      },
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "O4ul",
+                "hF1i"
+              ],
+              "width": 95,
+              "x": 829,
+              "y": 252,
+              "angle": 0,
+              "height": 79
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/image1114631.png",
+          "assetId": 42705,
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        },
+        "status": false
+      },
+      {
+        "image": {
+          "positionList": [
+            {
+              "sceneIdList": [
+                "O4ul",
+                "hF1i"
+              ],
+              "width": 71,
+              "x": 835,
+              "y": 370,
+              "angle": 0,
+              "height": 82
+            }
+          ],
+          "src": "https://vdo3.freckled.ai/IOAC_Assets/ioc/animationActivityProblem/1160/images/image1115446(1).png",
+          "assetId": 42693,
+          "className": "AnimationActivityProbImage",
+          "type": "image"
+        },
+        "status": false
+      }
+    ]
