@@ -1,0 +1,774 @@
+index.html
+
+<html>
+
+<head>
+
+  <script src="https://vdo3.freckled.ai/IOAC_Assets/ioc/support_Files/konva.js"></script>
+  <script src="https://vdo3.freckled.ai/IOAC_Assets/ioc/support_Files/confetti.js"></script>
+  <script src=" https://vdo3.freckled.ai/IOAC_Assets/ioc/support_Files/commonFunction.js"></script>
+
+  <!-- <script src="commonfunction.js"></script>    -->
+  <title>Game Title</title>
+  <link rel="stylesheet" href="" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #f0f0f0;
+      position: relative;
+    }
+    p {
+      position: absolute;
+    }
+    #uploadedImg {
+      position: absolute;
+      top: 0;
+      object-fit: contain;
+      height: 100%;
+      max-height: 100%;
+      display: none;
+    }
+    #closeImg {
+      position: absolute;
+      display: none;
+    }
+    @font-face {
+      font-family: "Comic Neue";
+      font-style: normal;
+      font-weight: 400;
+      src: url(https://fonts.gstatic.com/s/comicneue/v8/4UaHrEJDsxBrF37olUeD96rp5w.woff2) format("woff2");
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+        U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC,
+        U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    .bolded {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body onload="loadData()">
+  <div id="container"></div>
+
+  <p class="text1"></p>
+  <img src="" id="uploadedImg">
+  <img id="closeImg" src="" />
+  <input type="file" id="fileUpload" accept="image/*" style="display: none;">
+  <script>
+    var gameObj = {}
+    var stage = new Konva.Stage({
+      container: "container",
+    });
+
+    var layer = new Konva.Layer();
+    var layer1 = new Konva.Layer();
+    var layer2 = new Konva.Layer();
+    var layer3 = new Konva.Layer();
+    var div = document.querySelector('.text1');
+
+    function loadData() {
+      window.addEventListener("message", handleMessage);
+    }
+
+    function handleMessage(event) {
+      gameObj = event.data;
+      score = gameObj.totalScore;
+      stage.width(gameObj.stageWidth);
+      stage.height(gameObj.stageHeight);
+      if (gameObj.recordingPath && gameObj.recordingPath !== undefined) {
+        const objAssetId = gameObj.assetList.find(
+          (ele) => ele.className === "AnimationActivityProbAudio"
+        );
+        if (gameObj.gameData.quesText[3].text.assetId === objAssetId.assetId) {
+          Object.assign(gameObj.gameData.quesText[3].text, {
+            uploadimg: gameObj.recordingPath,
+            recordingId: gameObj.recordingId,
+          });
+        }
+        delete gameObj.recordingPath;
+        delete gameObj.recordingId;
+        delete gameObj.assetId;
+        console.log(
+          gameObj,
+          "gameObj in html after recording id--------------->>>>>>>>>>"
+        );
+      }
+      if (gameObj.operation === "Load Data") {
+        layer1.destroyChildren()
+        layer.destroyChildren()
+        start();
+      }
+      else if (gameObj.operation === 'GameStart') {
+        var startImg = startImage();
+        layer.add(startImg);
+        startImg.on("click tap", () => {
+          Object.assign(gameObj, { operation: "GameStart", gameStart: true })
+          window.parent.postMessage(
+            { dataObj: gameObj },
+            "*"
+          );
+          startImg.remove();
+          start()
+        });
+      }
+    }
+
+    function imageHandler(obj, d = 0, boolean = false) {
+      var image = new Image();
+      image.src = obj.src;
+      var xy = computeDimension(obj.positionList[d].x, obj.positionList[d].y);
+      var wh = computeDimension(
+        obj.positionList[d].width,
+        obj.positionList[d].height
+      );
+      var imageA = new Konva.Image({
+        x: xy[0],
+        y: xy[1],
+        image: image,
+        width: wh[0],
+        height: wh[1],
+        name: obj.name,
+        isFitted: obj.isFitted,
+        angle: d.angle,
+        isClicked: obj.isClicked,
+        status: obj.status,
+        draggable: boolean,
+      });
+      return imageA;
+    }
+
+    function texthandler(obj, d = 0, boolean = false) {
+      var xy = computeDimension(obj.positionList[d].x, obj.positionList[d].y);
+      var wh = computeDimension(
+        obj.positionList[d].width,
+        obj.positionList[d].height
+      );
+      var font = computeDimension(obj.fontSize, "");
+      var text = new Konva.Text({
+        x: xy[0],
+        y: xy[1],
+        width: wh[0],
+        height: wh[1],
+        fontSize: font[0],
+        fill: obj.fill,
+        fontFamily: obj.fontFamily,
+        fontStyle: obj.fontWeight,
+        text: obj.text,
+        angle: d.angle,
+        align: obj.textAlign,
+        draggable: boolean
+      });
+      return text;
+    }
+
+    var arr = []
+    var dot = []
+    var problemaudio = document.createElement("audio");
+    var problemaudio1 = document.createElement("audio");
+    var problemaudio2 = document.createElement("audio");
+
+    var story = document.createElement("audio");
+    var content = document.createElement("audio");
+    var dropAudio = document.createElement("audio");
+    var smallContent = document.createElement("audio");
+    var finalimg;
+    var prevbtn = ''
+    var concatenatedText = ''
+    var nextBlur = ''
+    var quesbtn = ""
+    var name = ""
+    var fileName = ""
+    var rightBlackEmoji = ''
+    var leftEmoji = ""
+    var uploadbtn = ""
+    var oldText = ''
+    var drop
+    var fileInput
+    var grp=[]
+    function start() {
+      var dragArr = []
+      var set = gameObj.gameData.set;
+      var game = gameObj.gameData.game;
+      var quesCount = gameObj.gameData.quesCount;
+      var scenecount = gameObj.gameData.sceneCount
+      var count = gameObj.gameData.Count;
+      var onclick = gameObj.gameData.onclick;
+      var onclickcount = gameObj.gameData.onclickcount;
+      var onlisten = gameObj.gameData.onlisten;
+      problemaudio.pause()
+
+      if (gameObj.gameData.uploadBtns[5].isSelected === false) {
+        dragfun()
+      }
+      else {
+        finialFun()
+      }
+      function dragfun() {
+
+        var bg = bgImageLoader(gameObj.gameData.firstBg[0].image);
+        var toptext = texthandler(gameObj.gameData.firstBg[0].text)
+        layer.add(bg, toptext);
+
+        var protext = texthandler(gameObj.gameData.proTexts[scenecount].text)
+        quesbtn = gameObj.gameData.Ques === true ? imageHandler(gameObj.gameData.Btns[5].image) : imageHandler(gameObj.gameData.firstBg[1].image)
+        quesbtn.listening(false)
+        layer.add(quesbtn)
+        if(scenecount!=5)
+        {
+          drop = texthandler(gameObj.gameData.drop.text)
+          layer.add(drop)
+        }
+        var nextBlur = imageHandler(gameObj.gameData.Btns[1].image, 0)
+        var prevBlur = imageHandler(gameObj.gameData.Btns[0].image, 0)
+        var nextbtn = imageHandler(gameObj.gameData.Btns[3].image)
+        var prevbtn = imageHandler(gameObj.gameData.Btns[2].image)
+
+        if (scenecount == 0) {
+          layer.add(prevBlur, nextBlur)
+        }
+        else if (scenecount > 0) {
+          layer.add(prevbtn, nextBlur)
+        }
+        nextbtn.on("click tap", () => {
+          scenecount++
+          counttext.text(`${scenecount + 1} / 6`)
+          problemaudio.volume = 0
+          grp[1].pause();
+          Object.assign(gameObj.gameData, { sceneCount: scenecount })
+          layer.destroyChildren()
+          dragfun()
+        })
+        prevbtn.on("click tap", () => {
+          scenecount--
+          grp[1].pause();
+          counttext.text(`${scenecount + 1} / 6`)
+          Object.assign(gameObj.gameData, { sceneCount: scenecount })
+          layer.destroyChildren()
+          dragfun()
+        })
+        var counttext = texthandler(gameObj.gameData.Btns[2].text)
+        layer.add(counttext)
+        counttext.text(`${scenecount + 1} / 6`)
+
+        gameObj.gameData.proImg.map((ele, index) => {
+          if (ele.image.num === scenecount) {
+            if (index==5) {
+                console.log(2255);
+                div.style.display = 'none'
+                var proimg = imageHandler(ele.image)
+                layer.add(proimg)
+                layer.add(protext)
+            }
+            else {
+              var proimg = imageHandler(ele.image,0)
+              layer.add(proimg)
+              var girl
+              if(scenecount==1)
+              {
+                  girl=imageHandler(gameObj.gameData.girl.image)
+                  layer.add(girl)
+              }
+              name = ele.image.name
+              var boneText = texthandler(ele.text)
+              concatenatedText = boneText.text()
+              let color = '#f37335'
+              let textOne;
+              if(scenecount==2)
+              {
+                let color2 = 'black'
+                let otherText = texthandler(gameObj.gameData.proImg[scenecount+1].text, 0)
+                let firstText = protext.text().replace(otherText.text(), `<span style="color: ${color2};" class="bolded"    >${otherText.text()}</span>`)
+                textOne = firstText.replace(concatenatedText, `<span id ="spanTag" style="color: ${color};" class="bolded">${concatenatedText}</span>`)
+              }
+              else if(scenecount==3)
+              {
+                let color2 = 'green'
+                let otherText = texthandler(gameObj.gameData.proImg[scenecount-1].text, 0)
+                let firstText = protext.text().replace(otherText.text(), `<span style="color: ${color2};" class="bolded"    >${otherText.text()}</span>`)
+                textOne = firstText.replace(concatenatedText, `<span id ="spanTag" style="color: ${color};" class="bolded">${concatenatedText}</span>`)
+              }
+              else
+                textOne = protext.text().replace(concatenatedText, `<span id ="spanTag" style="color: ${color};" class="bolded">${concatenatedText}</span>`)
+
+              div.style.display = 'block'
+              div.innerHTML = textOne
+              div.style.cssText = `
+                  font-size : ${protext.attrs.fontSize}px;
+                  width : ${protext.attrs.width}px ;
+                  height : ${protext.attrs.height}px ;
+                  top : ${protext.attrs.y - 20}px;
+                  left : ${protext.attrs.x}px ;
+                  text-align : center;
+                  font-family:Comic Neue;
+                  `
+              let spanTag = document.getElementById('spanTag')
+              if(scenecount!=1)
+              {
+                var dotImg = imageHandler(gameObj.gameData.dotImg[index].image)
+                layer.add(dotImg)
+              }
+              gameObj.gameData[name].map((e, i) => {
+                if (e.status == true) {
+                    if (scenecount!=1)   dotImg.remove()
+                    drop.remove()
+                    spanTag.style.color = 'green'
+                    if (scenecount != 5) {
+                        nextBlur.remove()
+                        layer.add(nextbtn)
+                    }
+                }
+                console.log(scenecount);
+                var dragimg = imageHandler(e.image, (e.status === true)  ? 1 : 0)
+                dragArr.push(dragimg)
+                layer.add(dragimg)
+                
+                // dragimg.draggable(true)
+                if (e.status === true) {
+                  dragArr.map((w) => {
+                    w.draggable(false)
+                  })
+                  if(scenecount==1) girl.moveToTop()
+                  if(scenecount==1)  proimg.remove() 
+                }
+                var xx, yy, ww, hh;
+                if (e.image.icCorrect === true) {
+                  finalimg = imageHandler(e.image, 1)
+                }
+                dragimg.on("dragstart", () => {
+                  dragimg.moveToTop()
+                  xx = dragimg.x()
+                  yy = dragimg.y()
+                  ww = dragimg.width()
+                  hh = dragimg.height()
+                  dragimg.width(finalimg.width())
+                  dragimg.height(finalimg.height())
+                })
+                dragimg.on("dragend", () => {
+                  if (dragimg.x() > finalimg.x() - 50 && dragimg.x() < finalimg.x() + finalimg.width() && dragimg.y() > finalimg.y() - 50 && dragimg.y() < finalimg.y() + finalimg.height() && e.image.icCorrect === true) {
+                    dragimg.x(finalimg.x())
+                    dragimg.y(finalimg.y())
+                    dragimg.width(finalimg.width())
+                    dragimg.height(finalimg.height())
+                    dragimg.draggable(false)
+                    if(scenecount!=0 && scenecount!=1)
+                      dotImg.remove() 
+                    drop.remove()
+                    if(scenecount==1)  proimg.remove()
+                    count++
+                    Object.assign(gameObj.gameData, { Count: count })
+                    Object.assign(gameObj.gameData[name][i], { status: true })
+                    gameObj.gameData[name].map((d) => {
+                      Object.assign(d, { isSelected: true })
+                      problemaudio.volume = 1
+                      problemaudio.src = ele.text.src
+                      problemaudio.play()
+                    })
+                    dragArr.map((w) => {
+                      w.draggable(false)
+                    })
+                   
+                    spanTag.style.color = 'green'
+                    if(scenecount!=5)
+                    {
+                      nextBlur.remove()
+                      layer.add(nextbtn)
+                    }
+                    grp[1].pause();
+                    console.log(gameObj);
+                    if(scenecount==1)   girl.moveToTop()
+                  }
+                  else {
+                    dragimg.x(xx)
+                    dragimg.y(yy)
+                    dragimg.width(ww)
+                    dragimg.height(hh)
+                  }
+                })
+              })
+            }
+          }
+        })
+        
+        if(scenecount!=6) {
+          if(gameObj.gameData.Btns[5].status==false && gameObj.gameData.uploadBtns[3].isSelected==false)
+          {
+              grp = updateAudioPlayer(gameObj.gameData.proTexts[scenecount].text.src, gameObj.gameData.Btns[4].image.positionList[0].x, gameObj.gameData.Btns[4].image.positionList[0].y)
+              var xy = computeDimension(50, 50)
+              grp[0].x(xy[0])
+              grp[0].y(xy[1])
+              layer.add(grp[0])
+              if (scenecount == 0 && gameObj.gameData.proTexts[scenecount].status === false) {
+                  problemaudio1.volume = 0
+                  problemaudio1.volume = 1
+                  problemaudio1.src = gameObj.gameData.firstBg[0].text.src
+                  problemaudio1.play()
+                  grp[0].listening(false)
+                  console.log("ll");
+                  problemaudio1.addEventListener("ended", () => {
+                          grp[0].listening(true)
+                          grp[1].play();
+                          problemaudio1.volume = 0
+                  })
+              }
+              else
+              {
+                  grp[1].play();
+              }
+              var name1=""
+              gameObj.gameData.proImg.map((ele, index) => {
+              if (ele.image.num === scenecount) {
+                name1 = ele.image.name
+              }
+              })
+              if(scenecount!=5)
+              {
+                  if (gameObj.gameData.proTexts[scenecount].status === true && gameObj.gameData[name1][0].status==false) {
+                          dragArr.map((w) => {
+                            w.draggable(true)
+                          })
+                  }
+              }
+              grp[1].addEventListener("ended", () => {
+                  if (scenecount === 0) {
+                        problemaudio2.volume = 1
+                        problemaudio2.src = gameObj.gameData.drop.text.src
+                        problemaudio2.play()
+                        grp[0].listening(false)
+                        problemaudio2.addEventListener("ended", () => {
+                          grp[0].listening(true)
+                        })
+                  }
+                  if (gameObj.gameData.proTexts[scenecount].status == false && scenecount!=5) {
+                    dragArr.map((w) => {
+                      w.draggable(true)
+                    })
+                  }
+                  Object.assign(gameObj.gameData.proTexts[scenecount], { status: true })
+                  if (scenecount == 5) {
+                      Object.assign(gameObj.gameData, { Ques: true })
+                      quesbtn.remove()
+                      quesbtn = imageHandler(gameObj.gameData.Btns[5].image, 0)
+                      layer1.add(quesbtn)
+                      fun()
+                  }
+              })
+          }
+          else
+          {
+            grp = updateAudioPlayer(gameObj.gameData.proTexts[scenecount].text.src, gameObj.gameData.Btns[4].image.positionList[0].x, gameObj.gameData.Btns[4].image.positionList[0].y)
+            var xy = computeDimension(50, 50)
+            grp[0].x(xy[0])
+            layer.add(grp[0])
+            grp[0].y(xy[1])
+          }
+        }
+        if(scenecount!=6 || gameObj.gameData.proTexts[scenecount].status==true )
+            fun()
+        function fun() {
+          if (gameObj.gameData.Ques === true) {         
+            quesbtn.listening(true)
+            if (gameObj.gameData.Btns[5].status === true) {
+              oldText = texthandler(gameObj.gameData.proTexts[scenecount].text, 0)
+              layer.add(oldText)
+              questionFun()
+            }
+            else
+                animation1(quesbtn)
+            quesbtn.on("click tap", () => {
+              problemaudio.volume = 0
+              grp[1].pause();
+              Object.assign(gameObj.gameData.Btns[5], { status: true })
+              oldText = texthandler(gameObj.gameData.proTexts[scenecount].text, 0)
+              layer.add(oldText)
+              if (gameObj.gameData.uploadBtns[3].isSelected === true) {
+                console.log("aaaaaa");
+                uploadFun()
+              }
+              else {
+                console.log("bbbbbbbb");
+                questionFun()
+              }
+            })
+          }
+          function animation1(circle) {
+            var period = 2500;
+            var anim = new Konva.Animation(function (frame) {
+              var opacity = Math.abs(Math.sin((frame.time * 2 * Math.PI) / period));
+              quesbtn.opacity(opacity);
+            }, layer1);
+            anim.start();
+          }
+        }
+      }
+      function questionFun() {
+        layer1.destroyChildren()
+        div.style.display = 'none'
+        var val = (game == 1) ? 5:1
+        if (quesCount != val) {
+          let leftEmoji = imageHandler(gameObj.gameData.left.image)
+          let right = imageHandler(gameObj.gameData.right.image)
+          let leftBlackEmoji = imageHandler(gameObj.gameData.blkLeft.image)
+          let rightBlackEmoji = imageHandler(gameObj.gameData.blkRight.image)
+          let quesPannel = imageHandler(gameObj.gameData.quesPad.image)
+          let newText = texthandler(gameObj.gameData.lastQues[quesCount].text)
+          let yesBtn = imageHandler(gameObj.gameData.yesBtn.image)
+          let noBtn = imageHandler(gameObj.gameData.noBtn.image)
+          let line = imageHandler(gameObj.gameData.uploadBtns[8].image)
+          let blackImg = imageHandler(gameObj.gameData.blackImg.image)
+          layer2.add(blackImg, quesPannel, newText, yesBtn, noBtn, line)
+          right.listening(false)
+          if (quesCount === 0) {
+            layer2.add(leftBlackEmoji, right)
+          }
+          else if (quesCount > 0) {
+              layer2.add(leftEmoji)
+              layer2.add(right)
+          }
+          if (gameObj.gameData.lastQues[quesCount].status === true) {
+            yesBtn.remove()
+            noBtn.remove()
+            let submit = imageHandler(gameObj.gameData.submitImage.image)
+            layer2.add(submit)
+            right.listening(true)
+          }
+          else {
+            problemaudio.volume = 1
+            problemaudio.src = gameObj.gameData.lastQues[quesCount].text.src
+            problemaudio.play()
+          }
+          leftEmoji.on('click tap', () => {
+            quesCount--
+            Object.assign(gameObj.gameData, { quesCount: quesCount })
+            problemaudio.volume=0
+            if(quesCount==1)
+            {
+              game=0;
+              Object.assign(gameObj.gameData, { game: game })
+            }
+            layer2.destroyChildren()
+            questionFun()
+          })
+          right.on("click tap", () => {
+            console.log(quesCount);
+            quesCount++
+            problemaudio.volume=0
+            Object.assign(gameObj.gameData, { quesCount: quesCount })
+            layer2.destroyChildren()
+            questionFun()
+          })
+          yesBtn.on("click tap", () => {
+            Object.assign(gameObj.gameData.lastQues[quesCount], { status: true })
+            layer2.destroyChildren()
+            questionFun()
+          })
+          noBtn.on("click tap", () => {
+            Object.assign(gameObj.gameData.lastQues[quesCount], { status: true })
+            layer2.destroyChildren()
+            questionFun()
+          })
+        }
+        else {
+            (game == 1) ? finialFun() : uploadFun()
+        }
+      }
+      function uploadFun() {
+        layer1.destroyChildren()
+        div.style.display = 'none'
+        let blackImg1 = imageHandler(gameObj.gameData.blackImg.image)
+        let quesPannel = imageHandler(gameObj.gameData.quesPad.image)
+        let line = imageHandler(gameObj.gameData.uploadBtns[8].image)
+        let newText = texthandler(gameObj.gameData.quesText[1].text)
+        leftEmoji = imageHandler(gameObj.gameData.left.image)
+        rightBlackEmoji = imageHandler(gameObj.gameData.blkRight.image)
+        let uploadImg = imageHandler(gameObj.gameData.uploadImage.image)
+        let leftBlackEmoji = imageHandler(gameObj.gameData.blkLeft.image)
+        uploadbtn = imageHandler(gameObj.gameData.uploadBtns[0].image)
+        layer2.add(blackImg1, quesPannel, newText, uploadImg, uploadbtn, rightBlackEmoji, line)
+        if (gameObj.gameData.uploadBtns[4].isSelected == false && gameObj.gameData.uploadBtns[3].isSelected == false) {
+          layer2.add(leftEmoji)
+        }
+        else {
+          layer2.add(leftBlackEmoji)
+        }
+        if(gameObj.gameData.uploadBtns[0].isSelected == false)
+        {
+          problemaudio.volume=1
+          problemaudio.src = gameObj.gameData.lastQues[3].text.src
+          problemaudio.play()
+        }
+        leftEmoji.on('click tap', () => {
+          quesCount--
+          problemaudio.volume=0
+          Object.assign(gameObj.gameData, { quesCount: quesCount })
+          layer2.destroyChildren()
+          questionFun()
+        })
+
+        if (gameObj.gameData.uploadBtns[0].isSelected === true) {
+          viewFun(gameObj.gameData.quesText[3].text.uploadimg)
+        }
+        uploadbtn.on('click tap', () => {
+          console.log();
+          fileInput = document.createElement("input")
+            fileInput.type = "file"
+            fileInput.accept = "image/*"  
+          fileInput.click();
+          fileInput.onchange = function (e) {
+            var file = e.target.files[0];
+            fileName = file.name;
+            Object.assign(gameObj.gameData.quesText[3], { imgtext: fileName })
+            var reader = new FileReader();
+            reader.onload = function (event) {
+              var imgId = gameObj.gameData.quesText[3].text.assetId;
+              var imgClassName = gameObj.gameData.quesText[3].text.className;
+              var recordingId = gameObj.gameData.quesText[3].text.recordingId;
+              var assetAry = [{ className: imgClassName, assetId: imgId, },];
+              const recordingObj = { type: "image", audioSrc: event.target.result, recordingId: recordingId, };
+              Object.assign(gameObj.gameData.uploadBtns[0], { isSelected: true })
+              viewFun(event.target.result)
+              submitRecording(gameObj, recordingObj, assetAry)
+            }
+            reader.readAsDataURL(file);
+          }
+        })
+        function viewFun(event) {
+          div.style.display = 'none'
+          uploadbtn.remove()
+          rightBlackEmoji.remove()
+          leftEmoji.remove()
+          let leftBlackEmoji = imageHandler(gameObj.gameData.blkLeft.image)
+          let right = imageHandler(gameObj.gameData.right.image)
+          let leftWhite = imageHandler(gameObj.gameData.left.image)
+          if(gameObj.gameData.uploadBtns[4].isSelected==true || gameObj.gameData.uploadBtns[3].isSelected==true)
+              layer2.add(right, leftBlackEmoji)
+          else
+              layer2.add(right, leftWhite)
+          let viewbtn = imageHandler(gameObj.gameData.uploadBtns[1].image)
+          let deltbtn = imageHandler(gameObj.gameData.uploadBtns[2].image)
+          layer2.add(viewbtn, deltbtn)
+          let imgtext = texthandler(gameObj.gameData.uploadBtns[6].text)
+          layer2.add(imgtext)
+          imgtext.text(gameObj.gameData.quesText[3].imgtext)
+          viewbtn.on('click tap', () => {
+            createUserImage(event)
+            uploadedImg.style.display = 'block'
+            closeImg.style.display = 'block'
+            closeImg.onclick = () => {
+              uploadedImg.style.display = 'none'
+              closeImg.style.display = 'none'
+            }
+          })
+          deltbtn.on('click tap', () => {
+            Object.assign(gameObj.gameData.uploadBtns[0], { isSelected: false })
+            layer2.destroyChildren()
+            uploadFun()
+          })
+          leftWhite.on("click tap", () => {
+              problemaudio.volume=0
+              quesCount = 0
+            Object.assign(gameObj.gameData, { quesCount: quesCount})
+            layer2.destroyChildren()
+            questionFun()
+          });
+          right.on("click tap", () => {
+            layer3.destroyChildren()
+            problemaudio.volume=0
+            game=1
+            Object.assign(gameObj.gameData, { game: game })
+            if(gameObj.gameData.uploadBtns[4].isSelected==false && gameObj.gameData.uploadBtns[3].isSelected==false)    
+            {
+                quesCount ++
+                Object.assign(gameObj.gameData, { quesCount: quesCount})
+            }
+            console.log(quesCount);
+            blackImg1.remove()
+            questionFun()
+          })
+        }
+      }
+      function finialFun() {
+        div.style.display = 'none'
+        layer2.destroyChildren()
+        Object.assign(gameObj.gameData, { gameCompleted: true });
+        Object.assign(gameObj, { totalScore: 100 });
+        Object.assign(gameObj.gameData.uploadBtns[5], { isSelected: true })
+        let finalbg = bgImageLoader(gameObj.gameData.uploadBtns[5].image)
+        let listen = imageHandler(gameObj.gameData.uploadBtns[3].image)
+        let change = imageHandler(gameObj.gameData.uploadBtns[4].image)
+        let congragulation = texthandler(gameObj.gameData.uploadBtns[4].text)
+        let finaltext = texthandler(gameObj.gameData.uploadBtns[5].text)
+        layer2.add(finalbg, listen, change, congragulation, finaltext)
+        problemaudio.volume = 1
+        problemaudio.src = gameObj.gameData.uploadBtns[4].text.src
+        problemaudio.play()
+        setTimeout(() => {
+          problemaudio.src = gameObj.gameData.uploadBtns[5].text.src
+          problemaudio.play()
+        }, 1100);
+        
+        change.on("click tap", () => {
+          console.log(gameObj.gameData.quesCount);
+          problemaudio.pause()
+          layer2.destroyChildren()
+          Object.assign(gameObj.gameData.uploadBtns[2], { isSelected: true })
+          Object.assign(gameObj.gameData.uploadBtns[0], { isSelected: true })
+          Object.assign(gameObj.gameData.uploadBtns[4], { isSelected: true })
+          problemaudio.volume = 0
+          layer1.destroyChildren()
+          scenecount = 0;
+          Object.assign(gameObj.gameData, { sceneCount: scenecount })
+            let finalbg = bgImageLoader(gameObj.gameData.uploadBtns[5].image)
+            let listen = imageHandler(gameObj.gameData.uploadBtns[3].image)
+            let change = imageHandler(gameObj.gameData.uploadBtns[4].image)
+            let congragulation = texthandler(gameObj.gameData.uploadBtns[4].text)
+            let finaltext = texthandler(gameObj.gameData.uploadBtns[5].text)
+            layer3.add(finalbg, listen, change, congragulation, finaltext)
+            uploadFun()
+        })
+        listen.on("click tap", () => {
+          problemaudio.volume = 0
+          layer1.destroyChildren()
+          layer2.destroyChildren()
+          layer3.destroyChildren()
+          scenecount = 0;
+          Object.assign(gameObj.gameData.uploadBtns[3], { isSelected: true })
+          Object.assign(gameObj.gameData.Btns[5], { status: false })
+          Object.assign(gameObj.gameData, { sceneCount: scenecount })
+          dragfun()
+        })
+      }
+      function createUserImage(ImgUrl) {
+        insertimg = imageHandler(gameObj.gameData.uploadBtns[6].image, 0)
+        var crossimg1 = imageHandler(gameObj.gameData.uploadBtns[7].image, 0)
+        closeImg.src = gameObj.gameData.uploadBtns[7].image.src
+        uploadedImg.src = ImgUrl;
+        uploadedImg.style.cssText = `
+                top : ${insertimg.attrs.y}px;
+                left : ${insertimg.attrs.x}px;
+                width : ${insertimg.attrs.width}px;
+                height :${insertimg.attrs.height}px;
+                object-fit: center;
+                visibility : none;
+                `
+        var crossPos = window.getComputedStyle(uploadedImg);
+        var cd = computeDimension(40, 40)
+        var crossX = parseInt(crossPos.width)
+        closeImg.style.cssText = `
+                top : ${insertimg.y() - cd[0]}px;
+                left : ${(insertimg.x() + insertimg.width()) - cd[0]}px;
+                width : ${crossimg1.width()}px;
+                height :${crossimg1.height()}px;
+                object-fit: center;
+                visibility : none;
+                `
+      }
+    }
+    stage.add(layer, layer1, layer3,layer2)
+  </script>
+</body>
+</html>
+
+==
